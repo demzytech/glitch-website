@@ -1,10 +1,14 @@
 import React from 'react'
+import NavScrollExample from '../Navigation'
 
 const Home = () => {
   return (
     <>
-       <main>
-        <div className='homegear'>
+       <main className='homeMain'>
+        <NavScrollExample/>
+        <section className='homeSection'>
+            
+            <div className='homegear'>
             <div>
                 <i class="fa-solid fa-gear" id='gear'></i>
             </div>
@@ -16,10 +20,16 @@ const Home = () => {
             </div>
         </div>
         <div>
-            <h1 className='homeheading'>We are GL1TCH</h1>
-            <p className='homepara'>A digital agency that crafts stunning websites, captivating designs, and effective marketing strategies to elevate your brand's online presence.</p>
+            <h1 className='homeheading'>Website That Speaks Your Vibe</h1>
+        </div>
+        <div>
+            <h5 className='homepara'>A digital agency that crafts stunning websites, captivating designs, and effective marketing strategies to elevate your brand's online presence.</h5>
+        </div>
+        <div>
+            <button className='homebtn'>explore oppurtunities</button>
         </div>
         
+        </section>
         </main> 
         <footer>
             

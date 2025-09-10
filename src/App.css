@@ -23,7 +23,7 @@
   position: relative;
   display: inline-block;
   padding: 0.75rem 1.8rem;
-  background-color: #0F0E0E;
+  background-color: black;
   border: none;
   border-radius: 6px;
   overflow: hidden;
@@ -32,6 +32,9 @@
   border-radius: 15px;
   margin-left: 70px;
   color: white;
+}
+.navbtn:hover{
+  background-color: #0e0e0e
 }
 .btntext{
   font-size: 20px;
@@ -167,3 +170,51 @@ gap: 50px;
 .txt{
   font-weight: 400;
 }
+.homeSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  font-family: 'Roboto Mono', monospace;
+  width: 1000px;
+  margin-left: 360px;
+}
+.homeMain{
+  background-image: url('https://media.istockphoto.com/id/1463228296/vector/half-tone-dots-seamless-grid-background.jpg?s=612x612&w=0&k=20&c=fWSm7LVMF3i4hS4PCBpltoeywpra-JJBKBesRFxvZZ4=');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+background-repeat: no-repeat;
+  height: 100vh;
+  padding: 20px;
+  margin-top: -20px;
+}
+  .homeheading{
+    font-size: 85px;
+    font-weight: 700;
+    color: #1B3041;
+  }
+  .homepara{
+    font-size: 20px;
+    color: #5D666F;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  .homebtn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+  }
+  .homebtn:hover{
+    background-color: white;
+    color: black;
+  }
