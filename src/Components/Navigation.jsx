@@ -4,7 +4,7 @@ function NavScrollExample() {
   return (
 
     <>   
-      <nav>
+      <nav className="navBar">
      <div className='logoHeader'><h1 className='logotext' data-text="GL1TCH">GL1TCH</h1></div>
         <div className="navContainer">
           <div className='navcon'>

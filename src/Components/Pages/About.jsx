@@ -1,8 +1,12 @@
+import { Carousel } from 'bootstrap'
 import React from 'react'
+import AvatarGroup from './Avatar'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <h1>yiouhugyuv</h1>
+    </div>
   )
 }
 
