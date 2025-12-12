@@ -1,14 +1,34 @@
-
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import NavScrollExample from '../Navigation'
+import About from './About'
 import AvatarGroup from './Avatar'
 import { motion } from 'framer-motion'
-import About from './About'
+import Service from './Service'
+
+
 const Home = () => {
+  const location = useLocation()
+
+  useEffect(() => {
+    // scroll to About or Service when that route is visited
+    if (location.pathname === '/bout') {
+      setTimeout(() => {
+        document.getElementById('bout')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    } else if(location.pathname === '/service') {
+      setTimeout(() => {
+        document.getElementById('service')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    }
+  }, [location.pathname])
+
+
   return (
     <>
-       <main className='homeMain'>
+      <main className='homeMain'>
         <NavScrollExample/>
-        <section className='homeSection'>
+        <section id="home" className='homeSection'>
             
             <div className='homegear'>
             <div>
@@ -66,13 +86,13 @@ const Home = () => {
         </div>
         
         </section>
-        <section>
-            <About/>
+        <section id="about" className="aboutSection" style={{ scrollMarginTop: '90px' }}>
+          <About />
         </section>
-        </main> 
-        <footer>
-            
-        </footer>
+        <section id="service" className="serviceSection" style={{ scrollMarginTop: '90px' }}>
+          <Service />
+        </section>
+      </main>
     </>
   )
 }

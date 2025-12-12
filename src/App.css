@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 #basic-nav-dropdown{
   color: #20282D;
   font-weight: 700;
@@ -19,8 +21,8 @@
    color: #fff;
 }
 .navbtn {
-  background-color: black;
-  border: black;
+  background-color: purple;
+  border: purple;
   width: 200px;
   border-radius: 8px;
   color: white;
@@ -28,7 +30,8 @@
   cursor: pointer;
 }
 .navbtn:hover{
-  background-color: #0e0e0e
+  background-color: white;
+  color: black;
 }
 .btntext{
   font-size: 17px;
@@ -75,6 +78,7 @@ gap: 50px;
 .logotext{
   position: relative;
   font-weight: 900;
+  color: purple;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 50px;
@@ -95,13 +99,13 @@ gap: 50px;
 }
 
 /* Hover triggers glitch */
-.logotext:hover::before {
+.logotext::before {
   color: #00fff9;
   opacity: 1;
   animation: glitchTop 0.5s infinite;
 }
 
-.logotext:hover::after {
+.logotext::after {
   color: #ff0055;
   opacity: 1;
   animation: glitchBottom 0.5s infinite;
@@ -201,6 +205,8 @@ gap: 50px;
   margin-top: -20px;
   position: relative;
   overflow: hidden;
+  gap: 30px;
+  /* justify-content: center; */
 }
 
 /* very subtle highlight at the top for depth */
@@ -228,10 +234,11 @@ gap: 50px;
 }
 
 .homeheading{
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 700;
     color: #1B3041;
     width: 900px;
+    font-family: 'Red Hat Display', sans-serif;
   }
   .homepara{
     font-size: 15px;
@@ -242,7 +249,7 @@ gap: 50px;
     margin-bottom: 40px;
   }
   .homebtn{
-    background-color: black;
+    background-color: purple;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -272,7 +279,7 @@ gap: 50px;
   .enumber{
     font-size: 40px;
     font-weight: 700;
-    color: black;
+    color: purple;
     font-family: 'Orbitron', sans-serif;
     padding-top: 20px;
   }
@@ -284,7 +291,7 @@ gap: 50px;
     margin-bottom: 20px;
   }
   .foundingbutton{
-    background-color: black;
+    background-color: purple;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -363,6 +370,250 @@ gap: 50px;
   align-items: center;
   gap: 20px;
 }
-html{
+.homeMain{
   scroll-behavior: smooth;
+}
+.aboutimg{
+  width: 500px;
+  border-radius: 15px;
+  height: 500px;
+  margin-left: 70px;
+}
+.aboutMain{
+  display: flex;
+    /* justify-content: center; */
+    gap: 110px;
+    margin-top: 30px;
+    margin-right: 100px;
+    /* margin-bottom: 100px;
+    margin-right: 70px; */
+}
+.carryingcard{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  background-color: purple;
+  border-radius: 12px;
+  width: 220px;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 18%;
+  right: -9%;
+  margin-bottom: 300px;
+}
+.anumber{
+  font-size: 50px;
+    font-weight: 800;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 20px;
+}
+.atext{
+  font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.aboutimgcontainer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.carryingimg{
+  width: 170px;
+  border-radius: 12px;
+  height: 190px;
+  position: absolute;
+  top: 45%;
+  right: 65%;
+  border: 5px solid white;
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); /* goes up */
+  }
+  100% {
+    transform: translateY(0); /* comes back down */
+  }
+}
+.aboutuscon{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: start;
+  justify-content: center;
+}
+.aboutustxt{
+  font-size: 15px;
+  font-weight: 500;
+  color: #5D666F;
+  font-family: DM Sans, sans-serif;
+}
+#abouticon{
+  color: purple;
+  font-size: 20px;
+}
+.icin{
+  display: flex;
+  gap: 15px;
+}
+.bigg{
+  font-size: 40px;
+  font-weight: 700;
+  color: #111111;
+  width: 650px;
+  margin-top: 10px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+.abtxt{
+  font-size: 16px;
+  font-weight: 400;
+  color: #5D666F;
+  line-height: 1.6;
+  margin-top: 20px;
+  width: 700px;
+  font-family: DM Sans, sans-serif;
+}
+.checky{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  /* margin-top: 15px; */
+}
+.abe{
+  display: flex;
+  gap: 20px;
+}
+.checktxt{
+  font-size: 16px;
+  font-weight: 400;
+  color: #5D666F;
+  font-family: DM Sans, sans-serif;
+  width: 370px;
+}
+#checkicon{
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  background-color: purple;
+  border-radius: 70%;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 10px;
+  /* transition: transform 0.3s ease;
+  animation: zoomOutShake 1s ease; */
+}
+  
+
+
+/* @keyframes zoomOutShake { */
+  /* 0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.4) rotate(-9deg);
+  }
+  40% {
+    transform: scale(1.4) rotate(9deg);
+  }
+  60% {
+    transform: scale(1.4) rotate(-3deg);
+  }
+  80% {
+    transform: scale(1.4) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+#checklist{
+  display: flex;
+  flex-direction: column;
+  gap: 1pcx;
+} */
+ #aboutcall{
+  color: white;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: purple;
+ border-radius: 20%;
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 10px;
+width: 50px;}
+.call{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #FEF2E3;
+  border-radius: 12px;
+}
+.callword{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.calltxt{
+  font-size: 14px;
+  font-weight: 400;
+  color: #5D666F;
+  font-family: DM Sans, sans-serif;
+  line-height: 19.6px;
+  margin-top: 5px;
+}
+.callnumber{
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  font-family: 'Red Hat Display', sans-serif;
+  padding-bottom: 10px;
+}
+.vline{
+  width: 1px;
+  height: 60px;
+  background: purple;
+  color: purple;
+  opacity: 0.1;
+}
+.nametxt{
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  font-family: Orbitron, sans-serif;
+}
+.servicecontainer{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+.servicetxt{
+  font-size: 18px;
+  font-weight: 500;
+  color: #5D666F;
+  font-family: DM Sans, sans-serif;
+  text-align: center;
+}
+.servicetxt1{
+  font-size: 48px;
+  font-weight: 700;
+  color: #111111;
+  font-family: 'Red Hat Display', sans-serif;
+  text-align: center;
+  line-height: 57.6px;
 }
