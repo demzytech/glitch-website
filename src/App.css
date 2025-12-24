@@ -1390,6 +1390,7 @@ width: 50px;}
     width: 100%;
     margin-top: 0;
     text-align: left;
+    margin-left: 2px;
   }
 
   .abtxt {
@@ -1400,6 +1401,7 @@ width: 50px;}
 
   .icin {
     gap: 12px;
+    margin-left: 2px;
   }
 
   .aboutustxt {
@@ -1414,11 +1416,13 @@ width: 50px;}
   .checky {
     gap: 10px;
     justify-content: flex-start;
+    margin-left: 2px;
   }
 
   .checktxt {
     font-size: 13px;
     width: 100%;
+    margin-left: 2px;
   }
 
   .aboutuscon {
