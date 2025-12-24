@@ -1,25 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 function NavScrollExample() {
   const location = useLocation()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleNavClick = (e, sectionId, targetPath) => {
+    // Close mobile menu after clicking
+    setIsMenuOpen(false)
     // If we're already on the home page or on the same target path, scroll instead of full navigation
     if (location.pathname === '/' || location.pathname === targetPath) {
       e.preventDefault()
       const el = document.getElementById(sectionId)
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-    // otherwise let the Link perform navigation; Home's useEffect will handle scrolling after route change
   }
 
   return (
-
     <>   
       <nav className="navBar">
-     <div className='logoHeader'><h1 className='logotext' data-text="GL1TCH">GL1TCH</h1></div>
-        <div className="navContainer">
+        <div className='logoHeader'><h1 className='logotext' data-text="GL1TCH">GL1TCH</h1></div>
+        
+        {/* Hamburger Icon - Mobile Only */}
+        <button 
+          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Navigation Container */}
+        <div className={`navContainer ${isMenuOpen ? 'active' : ''}`}>
           <div className='navcon'>
             <Link to="/" className="nav-link" onClick={(e)=>handleNavClick(e,'home','/')}><h4 className='navlinks'>Home</h4></Link>
             <Link to="/about" className="nav-link" onClick={(e)=>handleNavClick(e,'about','/about')}><h4 className='navlinks'>About</h4></Link>
@@ -31,10 +45,8 @@ function NavScrollExample() {
             </div>
           </div>
         </div>
-
       </nav>
     </>
-
   );
 }
 
