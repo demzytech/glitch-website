@@ -1213,13 +1213,14 @@ width: 50px;}
   }
 
   .navcon {
-    gap: 0;
+    gap: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     width: 100%;
     padding: 20px 0;
+    margin-left: 10px;
   }
 
   .navcon > * {
@@ -1711,7 +1712,7 @@ width: 50px;}
   }
 
   .navcon {
-    gap: 0;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1733,6 +1734,7 @@ width: 50px;}
   .navlinks {
     font-size: 14px;
     margin: 0;
+    padding-left: 30px;
   }
 
   .navbtn {
