@@ -11,10 +11,10 @@ export default function App(){
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<Home />} />      {/* keep Link to="/about" unchanged */}
-      <Route path="/service" element={<Service />} />
-      <Route path="/Team" element={<Team />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<Home />} />
+      <Route path="/service" element={<Home />} />
+      <Route path="/team" element={<Home />} />
+      <Route path="/contact" element={<Home />} />
     </Routes>
   )
 }

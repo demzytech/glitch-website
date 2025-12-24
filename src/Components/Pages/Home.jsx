@@ -5,20 +5,31 @@ import About from './About'
 import AvatarGroup from './Avatar'
 import { motion } from 'framer-motion'
 import Service from './Service'
+import HowWeWork from './HowWeWork'
+import Team from './Team'
+import Contact from './Contact'
 
 
 const Home = () => {
   const location = useLocation()
 
   useEffect(() => {
-    // scroll to About or Service when that route is visited
-    if (location.pathname === '/bout') {
-      setTimeout(() => {
-        document.getElementById('bout')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 50)
-    } else if(location.pathname === '/service') {
+    // scroll to About, Service, Team, or Contact when that route is visited
+    if (location.pathname === '/service') {
       setTimeout(() => {
         document.getElementById('service')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    } else if(location.pathname === '/about') {
+      setTimeout(() => {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    } else if(location.pathname === '/team') {
+      setTimeout(() => {
+        document.getElementById('team')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    } else if(location.pathname === '/contact') {
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 50)
     }
   }, [location.pathname])
@@ -86,11 +97,17 @@ const Home = () => {
         </div>
         
         </section>
-        <section id="about" className="aboutSection" style={{ scrollMarginTop: '90px' }}>
+        <section id="about" className="aboutSection">
           <About />
         </section>
-        <section id="service" className="serviceSection" style={{ scrollMarginTop: '90px' }}>
+        <section id="service" className="serviceSection">
           <Service />
+        </section>
+        <section id="team" className="teamSection">
+          <Team />
+        </section>
+        <section id="contact" className="contactSection">
+          <Contact />
         </section>
       </main>
     </>
