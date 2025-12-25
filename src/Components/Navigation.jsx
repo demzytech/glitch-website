@@ -40,9 +40,9 @@ function NavScrollExample() {
             <Link to="/service" className="nav-link" onClick={(e)=>handleNavClick(e,'service','/service')}><h4 className='navlinks'>Service</h4></Link>
             <Link to="/team" className="nav-link" onClick={(e)=>handleNavClick(e,'team','/team')}><h4 className='navlinks'>Team</h4></Link>
             <Link to="/contact" className="nav-link" onClick={(e)=>handleNavClick(e,'contact','/contact')}><h4 className='navlinks'>contact</h4></Link>
-            <div>
-              <button className='navbtn'><h4 className='btntext'>Book a meeting</h4></button>
-            </div>
+            <Link to="/book-meeting">
+              <button className='navbtn' onClick={() => setIsMenuOpen(false)}><h4 className='btntext'>Book a meeting</h4></button>
+            </Link>
           </div>
         </div>
       </nav>

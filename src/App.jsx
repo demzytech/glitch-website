@@ -6,6 +6,7 @@ import Home from './Components/Pages/Home'
 import Service from './Components/Pages/Service'
 import Team from './Components/Pages/Team'
 import Contact from './Components/Pages/Contact'
+import BookMeeting from './Components/Pages/BookMeeting'
 
 export default function App(){
   return (
@@ -15,6 +16,7 @@ export default function App(){
       <Route path="/service" element={<Home />} />
       <Route path="/team" element={<Home />} />
       <Route path="/contact" element={<Home />} />
+      <Route path="/book-meeting" element={<BookMeeting />} />
     </Routes>
   )
 }

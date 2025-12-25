@@ -75,7 +75,7 @@ const About = () => {
                 transition={{ duration: 1, ease: "easeOut", delay: 0.04 }}
                 viewport={{ once: false, amount: 0.6 }}
               />
-              <p className='checktxt'>Purpose. Impact. Results.</p>
+              <p className='checktxt' id='checktx'>Purpose. Impact. Results.</p>
             </div>
 
             <div className='checky'>
@@ -87,7 +87,7 @@ const About = () => {
                 transition={{ duration: 1, ease: "easeOut", delay: 0.08 }}
                 viewport={{ once: false, amount: 0.6 }}
               />
-              <p className='checktxt'>Our Growth Strategy</p>
+              <p className='checktxt' id='checktx'>Our Growth Strategy</p>
             </div>
 
             <div className='checky'>
@@ -99,7 +99,7 @@ const About = () => {
                 transition={{ duration: 1, ease: "easeOut", delay: 0.16 }}
                 viewport={{ once: false, amount: 0.6 }}
               />
-              <p className='checktxt'>Performance Insights</p>
+              <p className='checktxt' id='checktx'>Performance Insights</p>
             </div>
           </div>
         </div>
