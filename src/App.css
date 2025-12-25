@@ -1041,6 +1041,7 @@ width: 50px;}
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 320px;
 }
 
 .servicecard .learnmore{ background: none; border: none; color: purple; cursor: pointer; font-weight:700; font-size:16px }

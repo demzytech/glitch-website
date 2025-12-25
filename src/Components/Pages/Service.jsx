@@ -70,7 +70,7 @@ const Service = () => {
       {selected && (
         <div className='service-modal' role='dialog' aria-modal='true' onClick={() => setSelected(null)}>
           <div className='service-modal-content' onClick={e => e.stopPropagation()}>
-            <button className='modal-close' onClick={() => setSelected(null)} aria-label='Close'>×</button>
+            <button className='modal-close' onClick={() => setSelected(null)} aria-label='Close'></button>
             <div className='modal-left'>
               <h3 className='modal-title'>{servicesData.find(s=>s.id===selected).title}</h3>
               <p className='modal-desc'>{servicesData.find(s=>s.id===selected).details}</p>
