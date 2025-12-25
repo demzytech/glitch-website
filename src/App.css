@@ -1034,6 +1034,57 @@ width: 50px;}
   text-align: center;
 }
 
+/* Service card emphasis and modal */
+.servicecard{
+  position: relative;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.servicecard .learnmore{ background: none; border: none; color: purple; cursor: pointer; font-weight:700; font-size:16px }
+
+.servicecard:hover{ transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.12) }
+.servicecard.active{ transform: translateY(-10px) scale(1.02); box-shadow: 0 30px 80px rgba(0,0,0,0.18); z-index: 30 }
+
+.service-modal{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12,16,22,0.55);
+  z-index: 2000;
+  padding: 32px;
+}
+
+.service-modal-content{
+  background: #fff;
+  width: 100%;
+  max-width: 980px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  padding: 28px;
+  position: relative;
+}
+
+.service-modal .modal-left{ padding-right: 8px }
+.service-modal .modal-title{ font-size: 28px; margin: 0 0 8px 0; font-family: 'Red Hat Display', sans-serif }
+.service-modal .modal-desc{ color: #5D666F; line-height:1.6 }
+.service-modal .modal-bullets{ margin-top: 16px; padding-left: 18px }
+.service-modal .modal-bullets li{ margin-bottom: 10px }
+.service-modal .modal-right{ background: linear-gradient(180deg,#fff 0,#fff 100%); padding: 20px; border-radius:8px; display:flex; flex-direction:column; gap:12px; align-items:flex-start }
+.service-modal .btn-primary{ background: purple; color: #fff; padding: 12px 18px; border-radius: 8px; text-decoration:none; font-weight:700 }
+.modal-close{ position:absolute; right:12px; top:8px; background:none; border:none; font-size:28px; cursor:pointer }
+
+@media (max-width: 900px){
+  .service-modal-content{ grid-template-columns: 1fr; }
+  .service-modal{ padding: 16px }
+}
+
 .teamMemberName {
   font-size: 20px;
   font-weight: 700;
