@@ -50,14 +50,27 @@ const Service = () => {
 
       <div className='servicecards'>
         {servicesData.map(svc => (
-          <div key={svc.id} className={`servicecard ${selected === svc.id ? 'active' : ''}`}>
+          <div
+            key={svc.id}
+            className={`servicecard ${selected === svc.id ? 'active' : ''}`}
+            onClick={(e) => { e.stopPropagation(); }}
+            onPointerDown={(e) => { e.stopPropagation(); }}
+          >
             <div className='sense'>
               <i className={`fa-solid ${svc.icon}`} id={svc.iconId} />
             </div>
             <h2 className='serviceeee'>{svc.title}</h2>
             <h6 className='serviceee'>{svc.short}</h6>
             <div>
-              <button className='learnmore' onClick={() => setSelected(svc.id)} aria-expanded={selected===svc.id}>
+              <button
+                type="button"
+                className='learnmore'
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); console.log('LearnMore click', svc.id); setSelected(svc.id); }}
+                onPointerDown={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                onMouseDown={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                onTouchStart={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                aria-expanded={selected===svc.id}
+              >
                 Learn More <span><i className="fa-solid fa-arrow-right" /></span>
               </button>
             </div>
